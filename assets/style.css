@@ -100,3 +100,26 @@ blockquote.strong{
     float: left;           /* Text poteče kolem obrázku zprava */
     border: 1px solid #ddd; /* Jemný rámeček */
 }
+
+/* Obrázek obtékaný textem */
+.figure-left {
+  float: left;              /* obrázek vlevo, text ho obtéká */
+  max-width: 40%;           /* držíme rozumnou šířku */
+  margin: 0 20px 16px 0;    /* mezery kolem obrázku */
+  border-radius: 6px;       /* volitelné zaoblení rohů */
+}
+
+/* Oddělovač, který posune další sekci POD obtékaný obrázek */
+.clear-floats {
+  clear: both;              /* vynutí začátek až pod „floaty“ */
+}
+
+/* Na mobilu: obrázek plná šířka, bez obtékání (lepší čitelnost) */
+@media (max-width: 640px) {
+  .figure-left {
+    float: none;
+    display: block;
+    max-width: 100%;
+    margin: 0 0 16px 0;
+  }
+}
