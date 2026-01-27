@@ -16,16 +16,33 @@ body{
   line-height:1.6;
 }
 
-/* Hlavička s logem a navigací */
-.top{
-  display:flex; justify-content:space-between; align-items:center;
-  padding:24px 40px; border-bottom:1px solid var(--line);
+/* Základní kontejner horní lišty */
+.top {
+  background-color: #333; /* Tmavě šedé pozadí */
+  color: white;
+  padding: 10px 20px; /* Trocha místa kolem textu */
+  display: flex; /* Používá moderní layout pro snadné zarovnání */
+  justify-content: space-between; /* Zarovná logo doleva a menu doprava */
+  align-items: center; /* Vertikální zarovnání na střed */
 }
-.brand img{ height:32px; display:block; }
-nav a{
-  margin-left:24px; text-decoration:none; color:#374151; font-size:14px;
+
+/* Styl pro odkazy v navigaci */
+.top nav a {
+  color: white; /* Barva textu odkazů */
+  text-decoration: none; /* Odstraní výchozí podtržení */
+  margin-left: 20px; /* Vytvoří mezeru mezi jednotlivými odkazy v menu */
+  font-weight: bold; /* Tučný text */
 }
-nav a:hover{ text-decoration:underline; }
+
+/* Efekt při najetí myší na odkaz */
+.top nav a:hover {
+  text-decoration: underline; /* Znovu přidá podtržení pro interakci */
+}
+
+/* Zajistí, že logo nebude příliš velké */
+.top img {
+  max-height: 50px;
+}
 
 /* Úvodní „hero“ blok */
 .hero{
