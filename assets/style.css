@@ -92,3 +92,11 @@ blockquote.strong{
 .button:hover {
   background-color: #0056b3; /* Tmavší modrá při najetí myší */
 }
+/* Styl pro obrázek obálky */
+.book-cover {
+    max-width: 300px;      /* Maximální šířka, aby nebyl moc velký */
+    height: auto;          /* Automatická výška zachová proporce */
+    margin-right: 20px;    /* Mezera napravo od obrázku, pokud je text vedle */
+    float: left;           /* Text poteče kolem obrázku zprava */
+    border: 1px solid #ddd; /* Jemný rámeček */
+}
