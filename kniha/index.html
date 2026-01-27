@@ -1,44 +1,52 @@
 
-<
-!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Kniha – Mezi mečem a srdcem</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- DŮLEŽITÉ: správná cesta na CSS -->
-  /assets/style.css
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
 <header class="top">
-  /
-    /assets/logo.png
-    <span>Marian Stadler</span>
+  <!-- Odkaz na logo vedoucí na úvodní stránku -->
+  <a href="/index.html">
+    <img src="/assets/logo.png" alt="Logo">
   </a>
   <nav>
-    /Úvod</a>
-    /kniha/Kniha</a>
-    /autor/O autorovi</a>
+    <!-- FUNKČNÍ ODKAZY NA STRÁNKY -->
+    <a href="/index.html">Úvod</a>
+    <a href="/kniha/index.html">Kniha</a>
+    <a href="/autor/index.html">O autorovi</a>
   </nav>
 </header>
 
 <main class="container">
   <h1>O knize</h1>
 
-  <!-- OBRÁZEK OBTÉKANÝ TEXTEM (vlevo) -->
-  /assets/cover.jpg
-
   <p><strong>Mezi mečem a srdcem</strong> je esej o leadershipu bez iluzí.
-  Neusiluje o to naučit, jak být oblíbeným lídrem. Snaží se pojmenovat,
-  co vedení lidí skutečně znamená ve chvíli, kdy mizí pohodlí, souhlas i jistota.</p>
+  Neusiluje o to naučit, jak být oblíbeným lídrem. Snaží se pojmenovat, co vedení lidí skutečně znamená ve chvíli, kdy mizí pohodlí, souhlas i jistota.</p>
 
   <p>Kniha se opírá o realistickou tradici myšlení o moci, inspirovanou Niccolò Machiavellim — nikoli jako cynikem, ale jako pozorovatelem lidské povahy, konfliktu a odpovědnosti. Vede čtenáře od prvního napětí moci, přes krizi a etické dilema, až k otázkám zrání, odchodu a smíření.</p>
 
   <p>Nejde o návod. Jde o rámec, v němž lze lépe porozumět vlastní roli, rozhodnutím a důsledkům, které s sebou nesou.</p>
+<img src="/assets/cover.jpg" alt="Obálka knihy Mezi mečem a srdcem" class="book-cover">
+  <h2>Pro koho kniha je</h2>
+  <ul>
+    <li>lidem, kteří nesou odpovědnost za rozhodování,</li>
+    <li>lídrům, manažerům, majitelům firem a členům vedení,</li>
+    <li>těm, kdo už zažili krizi, konflikt nebo osamělost role,</li>
+    <li>a těm, kdo chtějí vést pravdivě, nikoli líbivě.</li>
+  </ul>
 
-  <!-- TADY ukončíme obtékání: další sekce začne POD obrázkem -->
-  <div class="clear-floats"></div>
+  <h2>Není určena</h2>
+  <ul>
+    <li>jako základní příručka leadershipu,</li>
+    <li>pro motivační čtení,</li>
+    <li>pro ty, kdo hledají rychlá řešení nebo univerzální recepty.</li>
+  </ul>
 
   <h2>O čem kniha mluví</h2>
   <ul>
@@ -51,23 +59,35 @@
     <li>a smíření jako nejzralejší formě vedení.</li>
   </ul>
 
-  <blockquote>
+  <p>Text je doplněn minimalistickými obrazovými kapitolami, které slouží jako tichá pauza — nikoli ilustrace.</p>
+
+  <blockquote class="strong">
     Nepřiznaná moc je vždy méně kontrolovatelná než ta přiznaná.
     A nepřiznaná odpovědnost nakonec neexistuje vůbec.
   </blockquote>
 
   <h2>Forma vydání</h2>
+  <p><em>Mezi mečem a srdcem</em> vychází jako autorské vydání.</p>
   <ul>
     <li>tištěná kniha,</li>
-    <li>limitovaná osobní distribuce,</li>
+    <li>limitovaná edice určená pro osobní distribuci,</li>
     <li>e‑book (s časovým odstupem).</li>
   </ul>
 
   <p class="contact">
-    Dotazy a zájem: mailto:marian.stadler@seznam.czmarian.stadler@seznam.cz</a>
+    Kniha není distribuována masově ani podpořena marketingovou kampaní.
+    Pokud se má šířit, pak prostřednictvím doporučení.
+  </p>
+
+  <p class="contact">
+    Dotazy a zájem prosím pište na:
+    <br>
+    <a href="mailto:marian.stadler@seznam.cz">marian.stadler@seznam.cz</a>
   </p>
 </main>
 
 </body>
+</html>
+
 </html>
 
