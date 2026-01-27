@@ -9,7 +9,33 @@
 </head>
 <body>
 
-<!-- Zde vložte ten OPRAVENÝ KÓD PRO HORNÍ LIŠTU, který už máte funkční -->
+</* Základní kontejner horní lišty */
+.top {
+  background-color: #333; /* Tmavě šedé pozadí */
+  color: white;
+  padding: 10px 20px; /* Trocha místa kolem textu */
+  display: flex; /* Používá moderní layout pro snadné zarovnání */
+  justify-content: space-between; /* Zarovná logo doleva a menu doprava */
+  align-items: center; /* Vertikální zarovnání na střed */
+}
+
+/* Styl pro odkazy v navigaci */
+.top nav a {
+  color: white; /* Barva textu odkazů */
+  text-decoration: none; /* Odstraní výchozí podtržení */
+  margin-left: 20px; /* Vytvoří mezeru mezi jednotlivými odkazy v menu */
+  font-weight: bold; /* Tučný text */
+}
+
+/* Efekt při najetí myší na odkaz */
+.top nav a:hover {
+  text-decoration: underline; /* Znovu přidá podtržení pro interakci */
+}
+
+/* Zajistí, že logo nebude příliš velké */
+.top img {
+  max-height: 50px;
+} -->
 <header class="top">
   <a href="/index.html">
     <img src="/assets/logo.png" alt="Logo">
