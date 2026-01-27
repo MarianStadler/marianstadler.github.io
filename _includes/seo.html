@@ -1,0 +1,50 @@
+{%- comment -%}
+Include this file inside your <head> (e.g. in _layouts/default.html or _includes/head.html):
+  {% raw %}{% include seo.html %}{% endraw %}
+It uses page.* then site.* fallbacks. Adjust site.url in _config.yml (e.g. https://marianstadler.github.io or your custom domain).
+{%- endcomment -%}
+
+{%- assign meta_title = page.title | default: site.title -%}
+{%- assign meta_description = page.description | default: site.description | default: "Stránka o knize od Marian Stadler." -%}
+{%- assign canonical = page.canonical | default: site.url | append: page.url -%}
+{%- if canonical contains "//" and canonical != "" %}{% else %}{% assign canonical = site.url %}{% endif %}
+
+<title>{{ meta_title | escape }}</title>
+<meta name="description" content="{{ meta_description | strip_html | truncate: 155 }}" />
+
+<link rel="canonical" href="{{ canonical }}" />
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:title" content="{{ meta_title | escape }}">
+<meta property="og:description" content="{{ meta_description | strip_html | truncate: 197 }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ canonical }}">
+{% if page.og_image or site.og_image %}
+<meta property="og:image" content="{{ page.og_image | default: site.og_image }}">
+{% endif %}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ meta_title | escape }}">
+<meta name="twitter:description" content="{{ meta_description | strip_html | truncate: 197 }}">
+{% if page.twitter_image or site.twitter_image %}
+<meta name="twitter:image" content="{{ page.twitter_image | default: site.twitter_image }}">
+{% endif %}
+
+<!-- Basic robots control (allow by default, but page can set noindex: true) -->
+{% if page.noindex %}
+<meta name="robots" content="noindex, nofollow" />
+{% endif %}
+
+<!-- Simple JSON-LD (WebSite) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "{{ site.url }}",
+  "name": "{{ site.title | escape }}",
+  "description": "{{ site.description | strip_html | truncate: 197 }},
+  "datePublished": "2026-01-27T10:06:13Z"
+}
+</script>
